@@ -1,0 +1,37 @@
+LTspice 24.1.9 for Windows
+Circuit: C:\Users\prime\Desktop\4Bit_RCA\device_testing.net
+Start Time: Sat Sep 13 19:12:22 2025
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = trap
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Direct Newton iteration for .op point succeeded.
+Total elapsed time: 0.139 seconds.
+
+Files loaded:
+C:\Users\prime\Desktop\4Bit_RCA\device_testing.net
+C:\Users\prime\AppData\Local\LTspice\lib\cmp\standard.mos
+C:\Users\prime\Desktop\4Bit_RCA\sim.meas
+C:\Users\prime\Desktop\4Bit_RCA\tsmc18dN.m
+C:\Users\prime\Desktop\4Bit_RCA\tsmc18dP.m
+
+C:\Users\prime\Desktop\4Bit_RCA\sim.meas(2): Voltage not found.
+.meas tran vin50  WHEN V(in)=0.25 RISE=2
+                       ^^^^^

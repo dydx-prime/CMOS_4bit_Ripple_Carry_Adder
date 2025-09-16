@@ -1,0 +1,29 @@
+* Prop delay high-to-low (tpHL)
+.meas tran vin50  WHEN V(a)=0.25 RISE=2
+.meas tran vout50 WHEN V(sum)=0.25 FALL=2
+.meas tran tpHL   PARAM='vout50-vin50'
+ 
+* Prop delay low-to-high (tpLH)
+.meas tran vin51  WHEN V(a)=0.25 FALL=1
+.meas tran vout51 WHEN V(sum)=0.25 RISE=1
+.meas tran tpLH   PARAM='vout51-vin51'
+ 
+* Rise time (10–90%)
+.meas tran t10r WHEN V(sum)=0.05 RISE=1
+.meas tran t90r WHEN V(sum)=0.45  RISE=1
+.meas tran tr PARAM='t90r-t10r'
+ 
+* Fall time (90–10%)
+.meas tran t90f WHEN V(sum)=0.45  FALL=1
+.meas tran t10f WHEN V(sum)=0.05 FALL=1
+.meas tran tf PARAM='t10f-t90f'
+ 
+* AVG_POWER
+* Integrate supply current over time window
+.meas tran curr_inte INTEG I(Vdd) FROM=0n TO=200n
+ 
+* Convert to energy (Joules) = charge × voltage
+.meas tran power PARAM='curr_inte*0.5'
+ 
+* Average power = energy / time interval
+.meas tran avg_power PARAM='power/200n'
